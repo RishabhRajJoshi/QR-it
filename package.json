@@ -1,7 +1,6 @@
 {
-  "homepage": "https://RishabhRajJoshi.github.io/QR-it",
-
   "name": "qr-it",
+  "homepage": "https://RishabhRajJoshi.github.io/QR-it",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
