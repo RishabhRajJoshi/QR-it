@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useState } from 'react'
 import Footer from './Footer';
 import Header from './Header';
@@ -10,13 +9,7 @@ function App() {
 
   async function getQr(){
   
-    const res = await axios({
-      method: 'get',
-      url: 'https://api.api-ninjas.com/v1/qrcode?data=' + text + '&format=jpg',
-      headers: { 'X-Api-Key': process.env.REACT_APP_API }
-    })
-    // console.log(res.data)
-    setQr("data:image/jpg;base64," + res.data)
+    await setQr( 'https://api.qrserver.com/v1/create-qr-code/?data='+ text)
     
   }
 
@@ -25,7 +18,7 @@ function App() {
 
   function handleClick(ev) {
     ev.preventDefault();
-    console.log(text);
+    // console.log(text);
     getQr();
    
     
