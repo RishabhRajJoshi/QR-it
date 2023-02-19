@@ -25,7 +25,7 @@ function App() {
 
   function handleClick(ev) {
     ev.preventDefault();
-    // console.log(text);
+    console.log(text);
     getQr();
    
     
@@ -44,7 +44,7 @@ function App() {
   return (
      <div>
      <Header/>
-    <div className='flex justify-center '>
+    <div className='flex justify-center'>
 
     <form className='flex flex-col  '>
    <textarea  className=' m-10 p-2 rounded-lg shadow-xl text-center' placeholder='enter text you want to convert' cols="30" rows="7" value={text} onChange={ev =>{setText(ev.target.value)}}></textarea>
